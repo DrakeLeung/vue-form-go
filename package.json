@@ -1,0 +1,33 @@
+{
+  "name": "vue-form-go",
+  "version": "0.0.1",
+  "description": "A form validation plugin 4 Vue",
+  "main": "dist/vue-form-go.js",
+  "scripts": {
+    "build": "rollup -c",
+    "example": "export NODE_PATH=`npm get prefix`/lib/node_modules && rollup -c rollup.example.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "form",
+    "validation",
+    "plugin"
+  ],
+  "author": "Drake Leung",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "eslint": "^3.2.0",
+    "eslint-config-airbnb-base": "^5.0.1",
+    "eslint-plugin-import": "^1.12.0",
+    "rollup": "^0.34.1",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-commonjs": "^3.3.1",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-replace": "^1.1.1"
+  },
+  "dependencies": {
+    "vue": "^1.0.26"
+  }
+}
