@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <form id="demo" lang="cmn-Hans" v-form-go="myForm">
+    <p>
+      <input autofocus type="email" v-model="model.email"
+        v-ctrl-go="email"
+      >
+      <div v-show="myForm.email.validity.typeMismatch">
+        邮箱的格式不正确
+      </div>
+    </p>
+    <p><input type="text"></p>
+  </form>
+
+  <script src="dist/build.js"></script>
+</body>
+</html>
