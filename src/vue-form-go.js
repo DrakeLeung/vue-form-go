@@ -1,17 +1,33 @@
 const vueFormGo = {}
 
 vueFormGo.install = Vue => {
+  let formId = ''
+
   Vue.directive('form-go', {
     bind() {
+      formId = this.expression
+      this.vm.$set(formId, {})
+    },
+  })
+
+
+  Vue.directive('ctrl-go', {
+    bind() {
+      this.vm.$set(
+        `${formId}.${this.expression}`,
+        { validity: this.el.validity }
+      )
+
       this.el.addEventListener('blur', () => {
         this.check()
       })
     },
 
     check() {
-      if (!this.el.checkValidity()) {
-        console.log(this.el.validationMessage)
-      }
+      this.vm.$set(
+        `${formId}.${this.expression}`,
+        { validity: this.el.validity }
+      )
     },
   })
 }
