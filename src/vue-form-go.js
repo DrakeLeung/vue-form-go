@@ -13,11 +13,6 @@ vueFormGo.install = Vue => {
 
   Vue.directive('ctrl-go', {
     bind() {
-      this.vm.$set(
-        `${formId}.${this.expression}`,
-        { validity: this.el.validity }
-      )
-
       this.el.addEventListener('blur', () => {
         this.check()
       })
